@@ -1,3 +1,5 @@
+---
+
 # Real-Time Kafka Project
 
 ## Introduction
@@ -5,41 +7,33 @@ This project is aimed at setting up a real-time data processing pipeline using A
 
 ## Step 1: Start the Kafka Environment
 1. Start the ZooKeeper service:
-   - **Bash:**
-     ```bash
-     bin/zookeeper-server-start.sh config/zookeeper.properties
-     ```
    - **Windows:**
      ```bash
-     bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+     .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
      ```
 
 2. Start the Kafka broker service:
-   - **Bash:**
-     ```bash
-     bin/kafka-server-start.sh config/server.properties
-     ```
    - **Windows:**
      ```bash
-     bin\windows\kafka-server-start.bat config\server.properties
+     .\bin\windows\kafka-server-start.bat .\config\server.properties
      ```
 
 ## Step 2: Create Topics
 Create topics to organize your real-time data streams.
 ```bash
-bin/kafka-topics.sh --create --topic topic_name --bootstrap-server localhost:9092
+.\bin\windows\kafka-topics.bat --create --topic topic_name --bootstrap-server localhost:9092
 ```
 
 ## Step 3: Produce Events
 Produce real-time events into the topics.
 ```bash
-bin/kafka-console-producer.sh --topic topic_name --bootstrap-server localhost:9092
+.\bin\windows\kafka-console-producer.bat --topic topic_name --bootstrap-server localhost:9092
 ```
 
 ## Step 4: Consume Events
 Consume real-time events from the topics.
 ```bash
-bin/kafka-console-consumer.sh --topic topic_name --from-beginning --bootstrap-server localhost:9092
+.\bin\windows\kafka-console-consumer.bat --topic topic_name --from-beginning --bootstrap-server localhost:9092
 ```
 
 ## Additional Notes
@@ -56,4 +50,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 - Special thanks to the Apache Kafka community for developing and maintaining Kafka.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
