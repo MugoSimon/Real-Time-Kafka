@@ -51,4 +51,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Acknowledgements
 - Special thanks to the Apache Kafka community for developing and maintaining Kafka.
-```
